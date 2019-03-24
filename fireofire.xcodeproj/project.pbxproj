@@ -12,7 +12,23 @@
 		FD987AEB223F8DDB0094D0AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD987AE9223F8DDB0094D0AA /* Main.storyboard */; };
 		FD987AED223F8DDF0094D0AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD987AEC223F8DDF0094D0AA /* Assets.xcassets */; };
 		FD987AF0223F8DDF0094D0AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD987AEE223F8DDF0094D0AA /* LaunchScreen.storyboard */; };
+		FD987AF8223F8E410094D0AA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD987AF7223F8E410094D0AA /* Alamofire.framework */; };
+		FD987AFA223F8EED0094D0AA /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD987AF7223F8E410094D0AA /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FD987AFB223F8EEE0094D0AA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FD987AFA223F8EED0094D0AA /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FD987AE2223F8DDB0094D0AA /* fireofire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fireofire.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +38,7 @@
 		FD987AEC223F8DDF0094D0AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD987AEF223F8DDF0094D0AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD987AF1223F8DDF0094D0AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD987AF7223F8E410094D0AA /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD987AF8223F8E410094D0AA /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +56,7 @@
 		FD987AD9223F8DDB0094D0AA = {
 			isa = PBXGroup;
 			children = (
+				FD987AF7223F8E410094D0AA /* Alamofire.framework */,
 				FD987AE4223F8DDB0094D0AA /* fireofire */,
 				FD987AE3223F8DDB0094D0AA /* Products */,
 			);
@@ -74,6 +93,7 @@
 				FD987ADE223F8DDB0094D0AA /* Sources */,
 				FD987ADF223F8DDB0094D0AA /* Frameworks */,
 				FD987AE0223F8DDB0094D0AA /* Resources */,
+				FD987AFB223F8EEE0094D0AA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,7 +303,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = fireofire/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +325,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = fireofire/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
